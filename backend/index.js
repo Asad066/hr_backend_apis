@@ -85,7 +85,7 @@ app.use("/template", TemplatesRouter);
 
 // The app.get() responds with “Hello to ToDo App API” for requests to the root URL (/) or route.
 app.get("/", (req, res) => {
-  res.send("<h1>Hello to CMS App API</h1>");
+  res.send("<h1>Hello Asad to CMS App API</h1>");
 });
 
 // Connecting with MongoDB with the mongoose.connect() method.
