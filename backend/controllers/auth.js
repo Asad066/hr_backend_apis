@@ -6,7 +6,6 @@ import bcrypt from "bcryptjs";
 // User is a Model getting from models/user file.
 import User from "../models/user.js";
 import nodemailer from "nodemailer";
-import { ConnectingAirportsOutlined } from "@mui/icons-material";
 
 
 export const signin = async (req, res) => {
