@@ -29,6 +29,7 @@ import DesignationRouter from "./routes/designation.js";
 import LevelOfEmployeeRouter from "./routes/level_of_employee.js";
 import FunctionsRouter from "./routes/functions.js";
 import TemplatesRouter from "./routes/template.js";
+import organizations from ./models/organization.js;
 import cloudinary from 'cloudinary';
 dotenv.config();
 
@@ -86,7 +87,8 @@ app.use("/template", TemplatesRouter);
 
 // The app.get() responds with “Hello to ToDo App API” for requests to the root URL (/) or route.
 app.get("/", (req, res) => {
-  res.send("<h1>Hello Asad to CMS App API</h1>");
+   const organizations = await Organization.find({ deleteStatus: false });
+  res.send(organizations);
 });
 
 // Connecting with MongoDB with the mongoose.connect() method.
