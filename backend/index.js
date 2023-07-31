@@ -58,7 +58,8 @@ app.use('/static',express.static('public'))
 // only looks at requests where the Content-Type header matches the type option.
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: 'https://hr-cms-frontend.vercel.app/signin',
+    optionsSuccessStatus: 200, origin: true, credentials: true }));
 
 //Defining Port on which our page is load.
 const PORT = process.env.PORT || 5000;
