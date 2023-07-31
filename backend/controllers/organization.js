@@ -9,7 +9,7 @@ import department from "../models/department.js";
 export const getOrganizations = async (req, res) => {
   try {
     const organizations = await Organization.find({ deleteStatus: false });
-    res.status(200).json(organizations);
+    res.status(200).json("ABC");
   } catch (error) {
     res.status(404).json({error:true, message: error.message });
   }
